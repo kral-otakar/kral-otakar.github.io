@@ -22,6 +22,9 @@ function card(project){
   if (project.img) {
     const img = el("img", { src: project.img, alt: project.title });
     a.appendChild(img);
+  } else {
+    const placeholder = el("div", { class: "img-placeholder" });
+    a.appendChild(placeholder);
   }
 
   const h3 = el("h3", {}, project.title);
