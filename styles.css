@@ -1,8 +1,8 @@
 /* ====== Tokens (barvy, fonty) ====== */
 :root{
     /* Fonty: velmi jednoduché. Special Elite je volitelný pro nadpisy. */
-    --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     --font-display: "Special Elite", Georgia, "Times New Roman", serif;
+    --font-card-title: 'Montserrat', Arial, sans-serif;
   
     --bg: #0b0d10;
     --surface: #11151b;
@@ -19,7 +19,7 @@
   body{
     background: var(--bg);
     color: var(--text);
-    font-family: --font-sans;
+    font-family: var(--font-card-title);
     line-height: 1.6;
   }
   .container{
@@ -48,6 +48,7 @@
     margin-top: 28px;
     padding: 18px 0;
     color: var(--muted);
+    font-family: var(--font-display);
   }
   
   /* ====== Grid & Cards ====== */
