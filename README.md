@@ -43,3 +43,9 @@ Otevři `projects.json` a uprav/rozšiř pole objektů:
 MIT – viz soubor LICENSE.
 Autor
 © 2025 Král Otakar
+
+### raw data
+https://raw.githubusercontent.com/kral-otakar/kral-otakar.github.io/refs/heads/master/index.html
+https://raw.githubusercontent.com/kral-otakar/kral-otakar.github.io/refs/heads/master/styles.css
+https://raw.githubusercontent.com/kral-otakar/kral-otakar.github.io/refs/heads/master/script.js
+https://raw.githubusercontent.com/kral-otakar/kral-otakar.github.io/refs/heads/master/projects.json 
