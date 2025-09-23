@@ -4,7 +4,8 @@ Osobní landing page s náhodným výběrem projektů (GitHub Pages).
 Statická, rychlá, bez frameworku. Data projektů jsou v `projects.json`.
 
 ### Struktura
-
+```
+/
 ├─ index.html
 ├─ styles.css
 ├─ script.js
@@ -12,7 +13,7 @@ Statická, rychlá, bez frameworku. Data projektů jsou v `projects.json`.
 ├─ assets/ # obrázky, favicony (volitelně)
 ├─ README.md
 └─ LICENSE
-
+```
 
 ### Funkce
 
@@ -34,7 +35,6 @@ Otevři `projects.json` a uprav/rozšiř pole objektů:
     "desc": "Výstavní galerie z LR Classic.",
     "tags": ["photo", "portfolio"]
   }
-  // …
 ]
 ```
 
