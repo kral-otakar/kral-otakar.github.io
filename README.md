@@ -36,6 +36,7 @@ Otevři `projects.json` a uprav/rozšiř pole objektů:
   }
   // …
 ]
+```
 
 ### Licence
 
