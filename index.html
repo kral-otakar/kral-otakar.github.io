@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects</title>
+  <meta name="description" content="Osobní přehled projektů a odkazů na GitHub Pages."/>
+  <meta name="author" content="Kral Otakar"/>
+
+  <!-- OG/Twitter -->
+  <meta property="og:title" content="Projects" />
+  <meta property="og:description" content="GitHub Pages." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kral-otakar.github.io/" />
+  <meta property="og:image" content="https://kral-otakar.github.io/assets/share.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"/>
+
+  <!-- JS (defer) -->
+  <script src="script.js?v=1" defer></script>
+</head>
+<body>
+  <div class="bg fx-noise"></div>
+  <div class="bg fx-radial"></div>
+
+  <header class="container header">
+    <a class="brand" href="/" aria-label="Domů">
+      <span class="logo" aria-hidden="true">⌁</span>
+      <span class="brand-text">Kral&nbsp;Otakar</span>
+    </a>
+    <nav class="nav">
+      <a href="https://github.com/kral-otakar" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:you@example.com">Kontakt</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1><span class="duo">Selected</span> Projects</h1>
+      <p class="lead">
+        Níže se při každém načtení zobrazí <strong>náhodný výběr</strong> projektů z <code>projects.json</code>.
+      </p>
+      <div class="controls">
+        <button id="reshuffle" class="btn" type="button" aria-label="Zobrazit jiný náhodný výběr">Zamíchat</button>
+      </div>
+      <p id="error" class="error" role="alert" aria-live="polite" hidden></p>
+    </section>
+
+    <section aria-label="Seznam projektů">
+      <ul id="projects" class="grid"></ul>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>© <span id="year"></span> Kral Otakar • Built on GitHub Pages</small>
+  </footer>
+</body>
+</html>

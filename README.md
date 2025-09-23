@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+## kral-otakar.github.io
 
-You can use the [editor on GitHub](https://github.com/kral-otakar/kral-otakar/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Osobní landing page s náhodným výběrem projektů (GitHub Pages).  
+Statická, rychlá, bez frameworku. Data projektů jsou v `projects.json`.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Struktura
 
-### Markdown
+├─ index.html
+├─ styles.css
+├─ script.js
+├─ projects.json
+├─ assets/ # obrázky, favicony (volitelně)
+├─ README.md
+└─ LICENSE
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### Funkce
 
-# Header 1
-## Header 2
-### Header 3
+- **Dark, elegant UI** (Playfair Display + Inter + JetBrains Mono).
+- **Responzivní grid** projektových karet.
+- **Náhodný výběr** projektů při každém načtení + button „Zamíchat“.
+- **Data oddělená v `projects.json`** (title, href, desc, tags).
+- Lehké **cache-busting** pro CSS/JS i JSON.
 
-- Bulleted
-- List
+### Jak upravit projekty
 
-1. Numbered
-2. List
+Otevři `projects.json` a uprav/rozšiř pole objektů:
 
-**Bold** and _Italic_ and `Code` text
+```json
+[
+  {
+    "title": "Lightroom Portfolio",
+    "href": "https://kral-otakar.github.io/lightroom-portfolio/",
+    "desc": "Výstavní galerie z LR Classic.",
+    "tags": ["photo", "portfolio"]
+  }
+  // …
+]
 
-[Link](url) and ![Image](src)
-```
+### Licence
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kral-otakar/kral-otakar/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+MIT – viz soubor LICENSE.
+Autor
+© 2025 Král Otakar
