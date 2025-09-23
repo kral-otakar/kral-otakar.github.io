@@ -1,7 +1,7 @@
 /* ====== Tokens (barvy, fonty) ====== */
 :root{
     /* Fonty: velmi jednoduché. Special Elite je volitelný pro nadpisy. */
-    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     --font-display: "Special Elite", Georgia, "Times New Roman", serif;
   
     --bg: #0b0d10;
@@ -41,6 +41,7 @@
   .subtitle{
     margin: 0 0 20px;
     color: var(--muted);
+    font-family: var(--font-display);
   }
   .site-foot{
     border-top: 1px solid var(--border);
@@ -73,6 +74,7 @@
   .card h3{
     margin: 0 0 6px;
     font-size: 18px;
+    font-family: var(--font-display);
   }
   .card p{
     margin: 0;
