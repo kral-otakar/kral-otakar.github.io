@@ -1,63 +1,9 @@
 [
     {
-      "title": "Lightroom Portfolio",
-      "href": "https://kral-otakar.github.io/lightroom-portfolio/",
+      "title": "fragmentary",
+      "href": "https://kral-otakar.github.io/fragmentary/",
       "desc": "Výstavní galerie z LR Classic.",
       "tags": ["photo", "portfolio"]
-    },
-    {
-      "title": "Alma Linux Notes",
-      "href": "https://kral-otakar.github.io/alma-notes/",
-      "desc": "Poznámky k instalaci a konfiguraci.",
-      "tags": ["linux", "dev"]
-    },
-    {
-      "title": "N49 Analysis",
-      "href": "https://kral-otakar.github.io/n49/",
-      "desc": "Analytické hrátky s 7×7 čísly.",
-      "tags": ["python", "math"]
-    },
-    {
-      "title": "WSL + PowerShell",
-      "href": "https://kral-otakar.github.io/wsl-ps/",
-      "desc": "Integrace skriptů mezi Windows a Linux.",
-      "tags": ["powershell", "wsl"]
-    },
-    {
-      "title": "Stable Diffusion Lab",
-      "href": "https://kral-otakar.github.io/sd-lab/",
-      "desc": "Pokusy s SD, Fooocus, A1111.",
-      "tags": ["ai", "images"]
-    },
-    {
-      "title": "Oracle APEX Demos",
-      "href": "https://kral-otakar.github.io/apex-demos/",
-      "desc": "Mini ukázky a patterny.",
-      "tags": ["db", "apex"]
-    },
-    {
-      "title": "React Widgets",
-      "href": "https://kral-otakar.github.io/react-widgets/",
-      "desc": "Kolekce UI komponent.",
-      "tags": ["react", "ui"]
-    },
-    {
-      "title": "Python Snippets",
-      "href": "https://kral-otakar.github.io/py-snippets/",
-      "desc": "Užitečné kousky kódu.",
-      "tags": ["python"]
-    },
-    {
-      "title": "Occulte Tarot Map",
-      "href": "https://kral-otakar.github.io/occult-tarot/",
-      "desc": "Mapování Goetie ↔ tarot.",
-      "tags": ["art", "research"]
-    },
-    {
-      "title": "Cursor Tips",
-      "href": "https://kral-otakar.github.io/cursor-tips/",
-      "desc": "Workflow a nastavení editoru.",
-      "tags": ["tools", "editor"]
     }
   ]
   
