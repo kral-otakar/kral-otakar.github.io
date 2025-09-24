@@ -117,3 +117,23 @@
   /* Špetka spacingu kolem mainu */
   main.container{ padding: 18px 0 24px; }
   
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-left {
+  flex: 1;
+}
+.home-link {
+  color: var(--muted);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  text-decoration: none;
+}
+.home-link:hover {
+  color: var(--accent);
+}
+  
