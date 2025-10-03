@@ -6,10 +6,11 @@
   
     --bg: #0b0d10;
     --surface: #11151b;
+    --surface-light: #191f28;  /* světlejší než pozadí */
     --text: #e6e9ef;
     --muted: #a7b0c2;
     --border: #222a36;
-    --accent: #a78bfa;
+    --accent: #a78bfa; /* #3a2f5c; */
   }
   
   /* ====== Base ====== */
@@ -40,7 +41,8 @@
   }
   .subtitle{
     margin: 0 0 20px;
-    color: var(--muted);
+    color: var(--accent);
+    opacity: 0.7;
     font-family: var(--font-display);
   }
   .site-foot{
@@ -61,28 +63,33 @@
     grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
     gap: 16px;
   }
+
   .card{
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 14px;
     overflow: clip;
   }
+
   .card > a{
     display: block;
     padding: 14px 14px 16px;
-    color: inherit;
+    color: inherit; /* dědí barvu textu (var(--text)) */
     text-decoration: none;
   }
+
   .card h3{
     margin: 0 0 6px;
     font-size: 18px;
     font-family: var(--font-display);
   }
+
   .card p{
     margin: 0;
     color: var(--muted);
     font-size: 14px;
   }
+
   .card:hover{ border-color: rgba(167,139,250,.45); }
   
   /* Obrázek projektu (volitelný) */
@@ -90,8 +97,11 @@
     display: block;
     width: 100%;
     height: 140px;
-    object-fit: cover;
+    object-fit: contain; /* zachová původní poměr stran oproti cover */
     margin-bottom: 12px;
+    border-radius: 10px; 
+    overflow: hidden; 
+    /* color: #a7b0c2; */
     /* border-bottom: 1px solid var(--border);*/
   }
   
@@ -102,6 +112,24 @@
     margin-bottom: 12px;
     /* border-bottom: 1px solid var(--border);*/
   }
+
+  .svg-wrapper {
+    width: 100%;
+    height: 140px;
+    margin-bottom: 12px;
+    display: block;
+    background: var(--surface-light);
+    border-radius: 10px;
+    overflow: hidden;
+    /* případně další styly dle potřeby */
+  }
+  
+  .svg-wrapper svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* případně další styly pro vnitřní SVG */
+  }  
   
   /* Chyba načtení */
   .error{

@@ -1,15 +1,43 @@
 [
-      {
-        "title": "fragmentary",
-        "href": "https://kral-otakar.github.io/fragmentary/",
-        "desc": "Book of fragments.",
-        "img": "assets/fragmentary.svg"        
-      },
-      {
-        "title": "paimon gallery",
-        "href": "https://paimon.myportfolio.com",
-        "desc": "My Adobe portfolio.",
-        "img": "assets/paimon_sigil.svg"
-      }
+  {
+    "id":1,
+    "title": "O.K. Demon photography",
+    "href": "https://okdemon.myportfolio.com",
+    "desc": "Adobe personal photo gallery. Coming soon...",
+    "img": "assets/init.svg",
+    "svgColor": "accent"
+  },
+  {
+    "id":2,
+    "title": "Atelier K228",
+    "href": "#",
+    "desc": "A small step. Coming soon...",
+    "img": "assets/09_PAIMON_seal.svg",
+    "svgColor": "accent"
+  },
+  {
+    "id":3,
+    "title": "The Voices of 72",
+    "href": "#",
+    "desc": "Démoni a čísla. Coming soon...",
+    "img": "assets/init.svg",
+    "svgColor": "muted"
+  },
+  {
+    "id":4,
+    "title": "Fragments of Fire",
+    "href": "#",
+    "desc": "Jedna stránka, tři pečeti. Coming soon...",
+    "img": "assets/init.svg",
+    "svgColor": "muted"
+  },
+  {
+    "id":5,
+    "title": "Magic squares",
+    "href": "#",
+    "desc": "Protokol, který odmítá hierarchii. Coming soon...",
+    "img": "assets/init.svg",
+    "svgColor": "muted"
+  }
   ]
   

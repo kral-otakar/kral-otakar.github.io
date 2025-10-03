@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Special+Elite&amp;family=Montserrat:wght@400;600&amp;display=swap');
+      
+      .special-elite {
+        font-family: 'Special Elite', serif;
+      }
+    </style>
+
+  </defs>  
+    <!-- Pozadí -->
+    <rect width="1200" height="630" fill="#0b0d10"/>
+    
+    <!-- Gradient overlay -->
+    <defs>
+      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.1" />
+        <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0.05" />
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="630" fill="url(#grad)"/>
+    
+    <!-- Geometrické fragmenty -->
+    <g transform="translate(200, 150)">
+      <polygon points="0,0 80,40 60,120 0,100" fill="#a78bfa" opacity="0.8"/>
+      <polygon points="100,20 180,0 200,80 120,100" fill="#e6e9ef" opacity="0.6"/>
+      <polygon points="220,40 300,20 280,100 200,120" fill="#a78bfa" opacity="0.4"/>
+    </g>
+    
+    <!-- Hlavní text -->
+    <text x="600" y="280" text-anchor="middle" class="special-elite" font-size="64" fill="#e6e9ef" font-weight="bold">fragmentary.fr</text>
+    
+    <!-- Podtitul -->
+    <text x="600" y="340" text-anchor="middle" class="special-elite" font-size="28" fill="#a7b0c2">magical fragments • in hoc signo vinces</text>
+    
+    <!-- "oh... what a world" -->
+    <text x="600" y="400" text-anchor="middle" class="special-elite" font-size="20" fill="#a78bfa" font-style="italic">oh... what a world</text>
+    
+    <!-- Dekorativní prvky -->
+    <circle cx="150" cy="500" r="3" fill="#a78bfa" opacity="0.6"/>
+    <circle cx="1050" cy="500" r="3" fill="#a78bfa" opacity="0.6"/>
+    <circle cx="600" cy="450" r="2" fill="#e6e9ef" opacity="0.4"/>
+  </svg>
