@@ -68,7 +68,7 @@ Notes:
 - Use paths relative to the site root (e.g., `assets/...`).
 
 ### Styling
-Key tokens (colors, fonts) live in `:root` within `styles.css`. The layout uses a responsive CSS Grid. Cards accept an optional image with fixed height and `object-fit: cover` to unify appearance.
+Key tokens (colors, fonts) live in `:root` within `styles.css`. The layout uses a responsive CSS Grid. Cards accept an optional image with fixed height and `object-fit: contain` to unify appearance.
 
 ### Deployment (GitHub Pages)
 Push the repository to the `master`/`main` branch and enable GitHub Pages in repository settings (Source: `root`). The site will be served at `https://<username>.github.io/kral-otakar.github.io/` or a custom domain if configured.
