@@ -11,13 +11,15 @@ a tento projekt dodržuje [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 - Základní portfolio stránka s responzivním designem
 - Dynamické načítání projektů z JSON souboru
 - Dark theme s custom properties
-- SVG podpora s inline renderingem
+- SVG podpora s inline renderingem a cache-bustingem podle VERSION
 - Redirect funkcionalita pro projekty
 - Cache busting pro optimalizaci
 - Centralizovaná správa verzí přes VERSION soubor
-- Automatické zobrazování verze v footeru
+- Automatické zobrazování verze a data release v footeru
+- A11y upozornění na chyby (role="alert", aria-atomic="true")
 - Česká lokalizace
 - MIT licence
+
 
 ### Technické detaily
 - Použití moderních webových standardů (HTML5, CSS3, ES6+)
