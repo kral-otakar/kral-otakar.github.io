@@ -21,15 +21,28 @@ function el(tag, attrs = {}, html = ""){
   return e;
 }
 
+// Jednotné zobrazení chyby (ARIA + focus)
+function showError(message){
+  const box = document.getElementById("error");
+  if (!box) return;
+  box.textContent = message;
+  box.hidden = false;
+  // zajistí, že čtečky chybu ihned zahlásí a uživatel ji uvidí/obejde klávesnicí
+  box.setAttribute("tabindex", "-1");
+  box.focus({ preventScroll: false });
+}
+
 // Pomocná async funkce pro vytvoření karty s podporou inline SVG
-async function card(project){
+async function card(project, version){
   const li = el("li", { class: "card" });
   const a  = el("a", { href: project.href, target: "_blank", rel: "noopener" });
 
   // Pokud je obrázek SVG, načti a vlož inline
   if (project.img && project.img.endsWith('.svg')) {
     try {
-      const res = await fetch(project.img);
+      const separator = project.img.includes('?') ? '&' : '?';
+      const versionParam = version ? `${separator}v=${version}` : '';
+      const res = await fetch(`${project.img}${versionParam}`);
       const svgText = await res.text();
       // Vytvoř dočasný element a vlož SVG jako HTML
       const wrapper = document.createElement('div');
@@ -38,8 +51,10 @@ async function card(project){
       wrapper.innerHTML = svgText;
       a.appendChild(wrapper);
     } catch (e) {
-      // Pokud selže, fallback na placeholder
+      // Pokud selže, fallback na placeholder (přístupný)
       const placeholder = el("div", { class: "img-placeholder" });
+      placeholder.setAttribute("role", "img");
+      placeholder.setAttribute("aria-label", "Obrázek projektu se nepodařilo načíst");
       a.appendChild(placeholder);
     }
   } else if (project.img) {
@@ -69,10 +84,11 @@ async function loadProjects(){
 
 async function init(){
   document.getElementById("year").textContent = new Date().getFullYear();
+  let versionData = null;
 
   // Načte verzi a datum z VERSION souboru
   try {
-    const versionData = await fetchJson("VERSION");
+    versionData = await fetchJson("VERSION");
     const versionEl = document.getElementById("version");
     const releaseDateEl = document.getElementById("release-date");
     
@@ -91,6 +107,7 @@ async function init(){
     const releaseDateEl = document.getElementById("release-date");
     if (versionEl) versionEl.textContent = "v1.0.0";
     if (releaseDateEl) releaseDateEl.textContent = new Date().toLocaleDateString('cs-CZ');
+    showError("Nepodařilo se načíst informace o verzi webu. Obsah je zobrazen, ale verze může být neaktuální.");
   }
 
   const list = document.getElementById("projects");
@@ -102,7 +119,7 @@ async function init(){
     // Jednoduše vypiš v pořadí, ve kterém jsou v JSONu (žádné míchání)
     for (const p of projects) {
       if (!p?.title || !p?.href) continue; // minimální validace
-      const cardEl = await card(p); // Vytvářej karty asynchronně (kvůli SVG)
+      const cardEl = await card(p, versionData?.version);  // Vytvářej karty asynchronně (kvůli SVG)
       list.appendChild(cardEl);
     }
 
@@ -116,7 +133,7 @@ async function init(){
 
   } catch (e) {
     console.error(e);
-    err.hidden = false;
+    showError("Nepodařilo se načíst projekty. Zkuste to prosím znovu později.");
   }
 }
 
@@ -131,7 +148,7 @@ function handleRedirect(projects) {
       // Zobrazit zprávu o přesměrování
       showRedirectMessage(project.title);
       
-      // Přesměrovat po 2 sekundách
+      // Přesměrovat po 3 sekundách
       setTimeout(() => {
         window.location.href = project.href;
       }, 3000);
